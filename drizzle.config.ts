@@ -4,7 +4,8 @@ export default defineConfig({
   schema: "./src/db/schema/index.ts",
   out: "./drizzle",
   dialect: "postgresql",
-  schemaFilter: ["public", process.env.DB_SCHEMA_NAME!],
+  // schemaFilter: ["public", "auth", "user", "app", process.env.DB_SCHEMA_NAME!],
+  schemaFilter: [process.env.DB_SCHEMA_NAME!], // public - for pgEnums
   dbCredentials: {
     url: process.env.DIRECT_URL!,
   },

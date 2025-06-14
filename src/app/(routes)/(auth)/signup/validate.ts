@@ -5,8 +5,8 @@ const disallowedUsernamePatterns = [
   "superuser",
   "superadmin",
   "root",
-  "jabirdev",
-  "cakfan",
+  "sanavisonwane",
+  "isanvii",
   "withcakfan",
 ];
 

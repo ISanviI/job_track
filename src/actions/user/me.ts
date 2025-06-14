@@ -11,6 +11,8 @@ export async function getMe(): Promise<UserType | null | undefined> {
   if (!session) {
     return null;
   }
-
-  return (await db.select().from(user).where(eq(user.id, session.user.id)))[0];
+  const users = await db.select().from(user).where(eq(user.id, session.user.id));
+  console.log(JSON.stringify(session, null, 2));
+  console.log(JSON.stringify(users, null, 2));
+  return users[0];
 }

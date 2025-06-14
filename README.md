@@ -28,10 +28,6 @@ cd nextjs-15
 
 Make sure you have Node.js installed, then run:
 
-```
-bun install
-```
-
 ### 3\. Configure Environment Variables
 
 Copy the env.example file to create your .env file:
@@ -50,7 +46,7 @@ Edit the `.env` file with your project's specific configurations:
 Generate your Drizzle schema and push into your database:
 
 ```
-bun db:push
+npx @better-auth/cli generate
 ```
 
 ### 5\. Start the Development Server
@@ -58,7 +54,7 @@ bun db:push
 Run the development server:
 
 ```
-bun dev
+npm run dev
 ```
 
 Your application will be available at [http://localhost:3000](http://localhost:3000).

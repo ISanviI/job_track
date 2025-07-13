@@ -12,8 +12,14 @@ export default async function Home() {
     <div className="grid min-h-screen grid-rows-[auto_1fr] items-start justify-items-center gap-4 p-4 font-[family-name:var(--font-geist-sans)]">
       <main className="w-full max-w-7xl">
         <nav className="flex w-full items-center justify-between border-b pb-4">
-          <Link href="/" className="text-xl font-semibold">
-            Track Job Postings
+          <Link href="/track" className="text-xl font-semibold">
+            Track Companies Career Pages
+          </Link>
+          <Link href="/websites" className="text-xl font-semibold">
+            Get tracked websites
+          </Link>
+          <Link href="/chat" className="text-xl font-semibold">
+            Chat with AI
           </Link>
           <div>
             {me ? (

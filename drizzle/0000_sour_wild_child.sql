@@ -53,5 +53,19 @@ CREATE TABLE "jobTrack"."verification" (
 	"updated_at" timestamp
 );
 --> statement-breakpoint
+CREATE TABLE "jobTrack"."website" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"user_id" text NOT NULL,
+	"url" text NOT NULL,
+	"s3_url" text,
+	"website_text" text,
+	"image_hash" text,
+	"image_diff_metrics" jsonb,
+	"next_track_at" timestamp NOT NULL,
+	"created_at" timestamp NOT NULL,
+	"updated_at" timestamp NOT NULL
+);
+--> statement-breakpoint
 ALTER TABLE "jobTrack"."account" ADD CONSTRAINT "account_user_id_user_id_fk" FOREIGN KEY ("user_id") REFERENCES "jobTrack"."user"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
-ALTER TABLE "jobTrack"."session" ADD CONSTRAINT "session_user_id_user_id_fk" FOREIGN KEY ("user_id") REFERENCES "jobTrack"."user"("id") ON DELETE cascade ON UPDATE no action;
+ALTER TABLE "jobTrack"."session" ADD CONSTRAINT "session_user_id_user_id_fk" FOREIGN KEY ("user_id") REFERENCES "jobTrack"."user"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "jobTrack"."website" ADD CONSTRAINT "website_user_id_user_id_fk" FOREIGN KEY ("user_id") REFERENCES "jobTrack"."user"("id") ON DELETE cascade ON UPDATE no action;

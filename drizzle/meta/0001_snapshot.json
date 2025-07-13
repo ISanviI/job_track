@@ -1,6 +1,6 @@
 {
-  "id": "9cfd1de9-08aa-4715-b538-8700c7c75313",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "f321b5e1-b047-46d7-87bc-ac30c016aa42",
+  "prevId": "9cfd1de9-08aa-4715-b538-8700c7c75313",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -378,15 +378,15 @@
           "primaryKey": false,
           "notNull": false
         },
-        "image_diff_metrics": {
-          "name": "image_diff_metrics",
-          "type": "jsonb",
+        "etags": {
+          "name": "etags",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "next_track_at": {
-          "name": "next_track_at",
-          "type": "timestamp",
+        "frequency": {
+          "name": "frequency",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },

@@ -59,13 +59,8 @@ npm run dev
 
 Your application will be available at [http://localhost:3000](http://localhost:3000).
 
-## Contributing
-
-Contributions are welcome! Feel free to:
-
-- Open issues for bugs or feature requests.
-- Submit pull requests to improve the project.
+## MCP Protocol Visualisation
+![MCP Protocol](public/MCP_Visual.gif)
 
 ### License
-
 This project is licensed under the MIT License.
